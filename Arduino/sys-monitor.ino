@@ -77,5 +77,8 @@ String getValue(String data, char separator, int index)
     }
   }
 
-  return index<9 ? data.substring(strIndex[0], strIndex[1]) : data.substring(strIndex[0], strIndex[1]-1);
+  String value = index<8 ? data.substring(strIndex[0], strIndex[1]) : data.substring(strIndex[0], strIndex[1]-1);
+
+  for(int i=value.length(); i<3; i++){value += " ";}
+  return value;
 }
